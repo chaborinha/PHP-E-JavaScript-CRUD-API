@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud PHP - JS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button id="openModalBtn">Cadastrar Novo Usuário</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Cadastro de Usuário</h2>
+            <form action="" method="post" id="form">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+                <hr>
+                <label for="age">Idade:</label>
+                <input type="number" name="age" id="age">
+                <hr>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <hr>
+                <label for="phone">Telefone:</label>
+                <input type="text" name="phone" id="phone">
+                <br>
+                <button id="bt_submit" type="submit">Efetuar Cadastro</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalUpdate" class="modal-update">
+        <div class="modal-content">
+            <span class="closeModalBtn" id="closeModalUpdate">&times;</span>
+            <h2 id="titulo">Alterar Usuário</h2>
+            <form action="" method="post" id="formUpdate">
+                <label for="name_upd">Nome:</label>
+                <input type="text" name="name_upd" id="name_upd">
+                <input type="hidden" name="id" id="id">
+                <hr>
+                <label for="age_upd">Idade:</label>
+                <input type="number" name="age_upd" id="age_upd">
+                <hr>
+                <label for="email_upd">Email:</label>
+                <input type="email" name="email_upd" id="email_upd">
+                <hr>
+                <label for="phone_upd">Telefone:</label>
+                <input type="text" name="phone_upd" id="phone_upd">
+                <br>
+                <button id="bt_submit_update" type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
